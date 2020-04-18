@@ -1,4 +1,6 @@
 var appliances = {
+    'huawei olt a': {'kilowatts': 3.0, 'cost': 0.33},
+    'huawei olt b': {'kilowatts': 3.0, 'cost': 0.33},
     'Central AC': {'kilowatts': 3.0, 'cost': 0.33},
     'Window AC (120V)': {'kilowatts': 0.73, 'cost': 0.08},
     'Oven Range': {'kilowatts': 2.3, 'cost': 0.25},

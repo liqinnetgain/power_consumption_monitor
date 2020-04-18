@@ -18,6 +18,9 @@
         <link href="css/full.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Acme|Baloo+Bhaina|Bitter|Cormorant+SC|Quattrocento+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +44,13 @@
     </head>
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+    <script>
+      $(document).ready(function () {
+        console.log("ready!");
+        add_row('huawei olt a', appliances)
+        add_row('huawei olt b', appliances)
+      });
+    </script>
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" style="font-family: 'Quattrocento Sans', sans-serif; font-size: 16px;" role="navigation">
             <div class="container">
@@ -52,7 +61,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/lightning.png"></a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logoEctivise.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,13 +72,13 @@
                             <a class="page-scroll" href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">About</a>
+                            <a class="page-scroll" href="#home">Home</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#appliances">Choose Appliances</a>
+                            <a class="page-scroll" href="#device">Devices</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#power">Real Time Power Consumption</a>
+                            <a class="page-scroll" href="#power">Power Usage</a>
                         </li>
                     </ul>
                 </div>
@@ -78,78 +87,36 @@
             <!-- /.container -->
         </nav>
 
-        <section id="about" class="about-section full">
+        <section id="home" class="about-section full">
             <div class="container">
                 <div class="row">
                     <div class = "container">
-                        <h1 class = "centermeh1"> Choose your appliances and view usage
-                        </h1>
-                        <h3 class = "centerme2"> Real-time energy data is a click away!</h3>
+                        <h1 class = "centermeh1"> GPON Devices Power Monitor</h1>
+                        <h5 class = "centerme2"> Real-time energy usage!</h5>
                         <br>
                     </div>
-                    <a class="btn btn-warning btn-lg page-scroll" href="#appliances">Click to choose appliances</a>
+                    <a class="btn btn-warning btn-lg page-scroll" href="#device">GPON Devices</a>
                 </div>
             </div>
         </section>
-
         <div class="container-fluid gray">
-            <section id="appliances" class="appliance-section" style="padding-top: 48px">
+            <section id="device" class="appliance-section" style="padding-top: 48px">
                 <div class="container-fluid">
-
                     <div class= "row" style="margin-top: 20px; margin-left: 55px;">
                         <div class= "col-lg-1">
                         </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Central AC', appliances);" style="margin-right: 10px;">
-                            <img src="img/air-conditioner.png">
-                            <p>Central AC</p>
+                        <div class="col-lg-3" onclick="turn_green(this); add_row('huawei olt a', appliances);" style="margin-right: 10px;">
+                            <img src="img/hwolt1.jpg">
+                            <p>Huawei OLT (A)</p>
                         </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Window AC (120V)', appliances);" style="margin-right: 10px;">
-                            <img src="img/air-conditioner-1.png">
-                            <p>Window AC (120V)</p>
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Electric heater (1500W)', appliances);" style="margin-right: 10px;">
-                            <img src="img/heater.png">
-                            <p>Electric heater (1500W)</p>
+                        <div class="col-lg-3" onclick="turn_green(this); add_row('huawei olt b', appliances);" style="margin-right: 10px;">
+                            <img src="img/hwolt1.jpg">
+                            <p>Huawei OLT (B)</p>
                         </div>
                     </div>
-
-                    <div class= "row" style="margin-top: 20px; margin-left: 55px;">
-                        <div class="col-lg-1">
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Oven Range', appliances);" style="margin-right: 10px;">
-                            <img src="img/stove.png">
-                            <p>Oven Range</p>
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Toaster Oven', appliances);" style="margin-right: 10px;">
-                            <img src="img/toaster.png">
-                            <p>Toaster Oven</p>
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Microwave Oven', appliances);" style="margin-right: 10px;">
-                            <img src="img/microwave-oven.png">
-                            <p>Microwave Oven</p>
-                        </div>
-                    </div>
-
-                    <div class= "row" style="margin-top: 20px; margin-left: 55px;">
-                        <div class = "col-lg-1">
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Incandescent bulb (75W)', appliances);" style="margin-right: 10px;">
-                            <img src="img/light-bulb.png">
-                            <p>Incandescent bulb (75W)</p>
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('Compact Fluorescent (20W)', appliances);" style="margin-right: 10px;">
-                            <img src="img/light-bulb-1.png">
-                            <p>Compact Fluorescent (20W)</p>
-                        </div>
-                        <div class="col-lg-3" onclick="turn_green(this); add_row('LCD TV', appliances);" style="margin-right: 10px;">
-                            <img src="img/smart-tv.png">
-                            <p>LCD TV</p>
-                        </div>
-                    </div>
-    
-                    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
-                        <a class="btn btn-default btn-lg page-scroll" href="#power">View Usage</a>
-                    </div>
+<!--                    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">-->
+<!--                        <a class="btn btn-default btn-lg page-scroll" href="#power">View Usage</a>-->
+<!--                    </div>-->
                 </div>
             </section>
         </div>
@@ -159,29 +126,29 @@
                 <div class="row">
                     <div class = "col-lg-12">
                         <h1 style=" font-size: 30px; font-family: 'Quattrocento Sans', sans-serif; text-align: center; margin-top: -10px;">
-                                Real Time Usage    
+                                Real Time Usage
                         </h1>
                     </div>
                 </div>
 
                 <div class="row" style="margin-top: 25px;">
-                    <div class ="col-lg-3"> 
+                    <div class ="col-lg-3">
                     </div>
                     <div class="col-lg-6">
                         <div class="table-responsive table-condensed table-borderless" style="font-family: 'Quattrocento Sans', sans-serif; font-size: 17px;">
                             <table class="table sortable" id="apps" style="margin-left: 15px;">
                                 <thead>
                                     <tr>
-                                        <th>Appliance</th>
-                                        <th>Kilowatts Used</th>
-                                        <th>Electric Cost ($)</th>
+                                        <th>OLT</th>
+                                        <th><a>Kilowatts Used</a></th>
+                                        <th>Electric Cost($)</th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row" style="margin-top: 20px;">
                     <div class ="col-lg-3">
                     </div>

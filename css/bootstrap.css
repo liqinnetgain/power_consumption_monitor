@@ -1097,7 +1097,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: white;
+  color: #337ab7;
   text-decoration: none;
 }
 a:hover,
@@ -3059,18 +3059,18 @@ fieldset[disabled] a.btn {
 .btn-default {
   color: #333;
   background-color: #fff;
-  border-color: #d58512;
+  border-color: #ccc;
 }
 .btn-default:focus,
 .btn-default.focus {
   color: #333;
   background-color: #e6e6e6;
-  border-color: #d58512;
+  border-color: #8c8c8c;
 }
 .btn-default:hover {
   color: #333;
   background-color: #e6e6e6;
-  border-color: #d58512;
+  border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3286,18 +3286,18 @@ fieldset[disabled] .btn-info.focus {
 }
 .btn-warning {
   color: #fff;
-  background-color: black;
-  border-color: #d58512;
+  background-color: #f0ad4e;
+  border-color: #eea236;
 }
 .btn-warning:focus,
 .btn-warning.focus {
   color: #fff;
-  background-color: black;
-  border-color: #d58512;
+  background-color: #ec971f;
+  border-color: #985f0d;
 }
 .btn-warning:hover {
   color: #fff;
-  background-color: black;
+  background-color: #ec971f;
   border-color: #d58512;
 }
 .btn-warning:active,

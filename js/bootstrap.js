@@ -529,6 +529,7 @@ if (typeof jQuery === 'undefined') {
   $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
       var $carousel = $(this)
+      consol.log("hello")
       Plugin.call($carousel, $carousel.data())
     })
   })
